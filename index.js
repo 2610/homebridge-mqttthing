@@ -1766,7 +1766,7 @@ function makeThing( log, accessoryConfig, api ) {
             // Characteristic.Windchill(Eve-only)
             function characteristic_Windchill( service ) {
                 service.addOptionalCharacteristic( Eve.Characteristics.Windchill ); // to avoid warnings
-                floatCharacteristic( service, 'Windchill', Eve.Characteristics.Windchill, null, config.topics.Windchill, 0 );
+                floatCharacteristic( service, 'Windchill', Eve.Characteristics.Windchill, null, config.topics.getWindchill, 0 );
             }
             
             // Characteristic.ContactSensorState
