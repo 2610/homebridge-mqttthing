@@ -1763,10 +1763,10 @@ function makeThing( log, accessoryConfig, api ) {
                 floatCharacteristic( service, 'DewPoint', Eve.Characteristics.DewPoint, null, config.topics.getDewPoint, 0 );
             }
             
-            // Characteristic.TemperatureApparent for wind chill(Eve-only)
-            function characteristic_TemperatureApparent( service ) {
-                service.addOptionalCharacteristic( Eve.Characteristics.TemperatureApparent ); // to avoid warnings
-                floatCharacteristic( service, 'TemperatureApparent', Eve.Characteristics.TemperatureApparent, null, config.topics.getTemperatureApparent, 0 );
+            // Characteristic.windchill for wind chill(Eve-only)
+            function characteristic_windchill( service ) {
+                service.addOptionalCharacteristic( Characteristic.CurrentTemperature ); // to avoid warnings
+                floatCharacteristic( service, 'windchill', Characteristic.CurrentTemperature, null, config.topics.getwindchill, 0 );
             }
             
             // Characteristic.ContactSensorState
